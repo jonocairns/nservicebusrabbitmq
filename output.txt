@@ -1,0 +1,1803 @@
+ILMerge version 2.9.210.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v2', using directory 'C:\Windows\Microsoft.NET\Framework64\v2.0.50727\..\v2.0.50727' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'SMDiagnostics'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+AssemblyResolver: Unable to resolve reference. (It still might be found, e.g., in the GAC.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+An exception occurred during merging:
+Unresolved assembly reference not allowed: System.Configuration.
+   at System.Compiler.Ir2md.GetAssemblyRefIndex(AssemblyNode assembly)
+   at System.Compiler.Ir2md.GetTypeRefIndex(TypeNode type)
+   at System.Compiler.Ir2md.VisitReferencedType(TypeNode type)
+   at System.Compiler.Ir2md.VisitClass(Class Class)
+   at System.Compiler.Ir2md.VisitModule(Module module)
+   at System.Compiler.Ir2md.SetupMetadataWriter(String debugSymbolsLocation)
+   at System.Compiler.Ir2md.WritePE(Module module, String debugSymbolsLocation, BinaryWriter writer)
+   at System.Compiler.Writer.WritePE(String location, Boolean writeDebugSymbols, Module module, Boolean delaySign, String keyFileName, String keyName)
+   at System.Compiler.Writer.WritePE(CompilerParameters compilerParameters, Module module)
+   at ILMerging.ILMerge.Merge()
+   at ILMerging.ILMerge.Main(String[] args)
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
+ILMerge version 2.10.526.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /target:library /targetPlatform:v4,C:\Windows\Microsoft.NET\Framework\v4.0.30319 /log:output.txt /out:build/NServiceBus.RabbitMQ.dll src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll lib\RabbitMQ\RabbitMQ.Client.dll lib\RabbitMQ\RabbitMQ.ServiceModel.dll 
+Set platform to 'v4', using directory 'C:\Windows\Microsoft.NET\Framework\v4.0.30319' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll
+	lib\RabbitMQ\RabbitMQ.Client.dll
+	lib\RabbitMQ\RabbitMQ.ServiceModel.dll
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Unicast.Transport.RabbitMQ.dll'.
+	Successfully read in assembly.
+	There were no errors reported in NServiceBus.Unicast.Transport.RabbitMQ's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.Client.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.Client.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.Client's metadata.
+Trying to read assembly from the file 'D:\Projects\nservicebusrabbitmq\master\lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'lib\RabbitMQ\RabbitMQ.ServiceModel.dll'.
+	Successfully read in assembly.
+	There were no errors reported in RabbitMQ.ServiceModel's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	NServiceBus.Unicast.Transport.RabbitMQ.PeKind = ILonly
+	RabbitMQ.Client.PeKind = ILonly
+	RabbitMQ.ServiceModel.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus.Core' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Transactions'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Transactions'.
+Resolved assembly reference 'System.Transactions' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'log4net'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'log4net'.
+Resolved assembly reference 'log4net' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System'.
+Resolved assembly reference 'System' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'System.Core'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Core'.
+Resolved assembly reference 'System.Core' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'NServiceBus.Unicast.Transport.RabbitMQ' is referencing assembly 'NServiceBus'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Resolved assembly reference 'NServiceBus' to 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'. (Used referencing Module's directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.ServiceModel'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.ServiceModel'.
+Resolved assembly reference 'System.ServiceModel' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'. (Used framework directory.)
+AssemblyResolver: Assembly 'RabbitMQ.ServiceModel' is referencing assembly 'System.Configuration'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+	AssemblyResolver: Did not find assembly in referencing assembly's directory.
+	AssemblyResolver: Attempting input directory.
+	AssemblyResolver: Did not find assembly in input directory.
+	AssemblyResolver: Attempting user-supplied directories.
+	AssemblyResolver: No user-supplied directories.
+	AssemblyResolver: Attempting framework directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Configuration'.
+Resolved assembly reference 'System.Configuration' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'. (Used framework directory.)
+Merging assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Merging assembly 'RabbitMQ.Client' into target assembly.
+Merging assembly 'RabbitMQ.ServiceModel' into target assembly.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.DurableInstancing'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.DurableInstancing'.
+Resolved assembly reference 'System.Runtime.DurableInstancing' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.DurableInstancing.dll'. (Used referencing Module's directory.)
+Merging assembly-level attributes from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+Copying 1 Win32 Resources from assembly 'NServiceBus.Unicast.Transport.RabbitMQ' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'build/NServiceBus.RabbitMQ.dll'.
+AssemblyResolver: Assembly 'System.ServiceModel' is referencing assembly 'System.Runtime.Serialization'.
+	AssemblyResolver: Attempting referencing assembly's directory.
+Can not find PDB file. Debug info will not be available for assembly 'System.Runtime.Serialization'.
+Resolved assembly reference 'System.Runtime.Serialization' to 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Runtime.Serialization.dll'. (Used referencing Module's directory.)
+Location for referenced assembly 'System.Configuration' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Configuration.dll'
+	There were no errors reported in  System.Configuration's metadata.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+Location for referenced assembly 'log4net' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\log4net.dll'
+	There were no errors reported in  log4net's metadata.
+Location for referenced assembly 'System' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll'
+	There were no errors reported in  System's metadata.
+Location for referenced assembly 'NServiceBus.Core' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.Core.dll'
+	There were no errors reported in  NServiceBus.Core's metadata.
+Location for referenced assembly 'System.Core' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Core.dll'
+	There were no errors reported in  System.Core's metadata.
+Location for referenced assembly 'System.Transactions' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Transactions.dll'
+	There were no errors reported in  System.Transactions's metadata.
+Location for referenced assembly 'NServiceBus' is 'D:\Projects\nservicebusrabbitmq\master\src\NServiceBus.Unicast.Transport.RabbitMQ\bin\Release\NServiceBus.dll'
+	There were no errors reported in  NServiceBus's metadata.
+Location for referenced assembly 'System.Xml' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Xml.dll'
+	There were no errors reported in  System.Xml's metadata.
+Location for referenced assembly 'System.ServiceModel' is 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.ServiceModel.dll'
+	There were no errors reported in  System.ServiceModel's metadata.
+ILMerge: Done.
