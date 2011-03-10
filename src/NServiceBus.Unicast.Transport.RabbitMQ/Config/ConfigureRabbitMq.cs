@@ -29,11 +29,22 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ.Config
 			{
 				this.config.ConfigureProperty(t => t.NumberOfWorkerThreads, cfg.NumberOfWorkerThreads);
 				this.config.ConfigureProperty(t => t.MaximumNumberOfRetries, cfg.MaxRetries);
-				this.config.ConfigureProperty(t => t.ListenAddress, cfg.InputQueue);
-				this.config.ConfigureProperty(t => t.PoisonAddress, cfg.ErrorQueue);
+				this.config.ConfigureProperty(t => t.InputBroker, cfg.InputBroker);
+				this.config.ConfigureProperty(t => t.InputExchange, cfg.InputExchange);
+				this.config.ConfigureProperty(t => t.InputExchangeType, cfg.InputExchangeType);
+				this.config.ConfigureProperty(t => t.InputQueue, cfg.InputQueue);
+				this.config.ConfigureProperty(t => t.InputRoutingKeys, cfg.InputRoutingKeys);
+				this.config.ConfigureProperty(t => t.DoNotCreateInputExchange, cfg.DoNotCreateInputExchange);
+				this.config.ConfigureProperty(t => t.DoNotCreateInputQueue, cfg.DoNotCreateInputQueue);
+				this.config.ConfigureProperty(t => t.ErrorBroker, cfg.ErrorBroker);
+				this.config.ConfigureProperty(t => t.ErrorExchange, cfg.ErrorExchange);
+				this.config.ConfigureProperty(t => t.ErrorExchangeType, cfg.ErrorExchangeType);
+				this.config.ConfigureProperty(t => t.ErrorQueue, cfg.ErrorQueue);
+				this.config.ConfigureProperty(t => t.ErrorRoutingKeys, cfg.ErrorRoutingKeys);
+				this.config.ConfigureProperty(t => t.DoNotCreateErrorExchange, cfg.DoNotCreateErrorExchange);
+				this.config.ConfigureProperty(t => t.DoNotCreateErrorQueue, cfg.DoNotCreateErrorQueue);
+
 				this.config.ConfigureProperty(t => t.TransactionTimeout, TimeSpan.FromMinutes(cfg.TransactionTimeout));
-				this.config.ConfigureProperty(t => t.DoNotCreateQueues, cfg.DoNotCreateQueues);
-				this.config.ConfigureProperty(t => t.ListenExchangeType, cfg.ListenExchangeType);
 				this.config.ConfigureProperty(t => t.SendAcknowledgement, cfg.SendAcknowledgement);
 			}
 		}
@@ -59,9 +70,9 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ.Config
 		public ConfigRabbitMqTransport On(string listenAddress, string poisonAddress)
 		{
 			if (!String.IsNullOrEmpty(listenAddress))
-				config.ConfigureProperty(t => t.ListenAddress, listenAddress);
+				config.ConfigureProperty(t => t.InputAddress, listenAddress);
 			if (!String.IsNullOrEmpty(poisonAddress))
-				config.ConfigureProperty(t => t.PoisonAddress, poisonAddress);
+				config.ConfigureProperty(t => t.ErrorAddress, poisonAddress);
 			return this;
 		}
 	}

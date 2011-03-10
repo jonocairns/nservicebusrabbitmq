@@ -19,11 +19,12 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 		private readonly ConnectionProvider connectionProvider = new ConnectionProvider();
 		private readonly ILog log = LogManager.GetLogger(typeof (RabbitMqTransport));
 		private readonly List<WorkerThread> workers = new List<WorkerThread>();
-		private readonly ReaderWriterLockSlim failuresPerMessageLocker = new ReaderWriterLockSlim();
-		private readonly IDictionary<string, Int32> failuresPerMessage = new Dictionary<string, Int32>();
-		private RabbitMqAddress listenAddress;
-		private RabbitMqAddress poisonAddress;
-		//private IHeadersSerializer headersSerializer;
+		private readonly ReaderWriterLockSlim failuresPerMessageLocker 
+			= new ReaderWriterLockSlim();
+		private readonly IDictionary<string, Int32> failuresPerMessage 
+			= new Dictionary<string, Int32>();
+		private RabbitMqAddress inputAddress;
+		private RabbitMqAddress errorAddress;
 		private Int32 numberOfWorkerThreads;
 		private Int32 maximumNumberOfRetries;
 		private IsolationLevel isolationLevel;
@@ -38,16 +39,16 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 		[ThreadStatic] private static MessageReceiveProperties messageContext;
 
-		public bool DoNotCreateQueues { get; set; }
-
 		public void Start()
 		{
-			CreateQueuesIfNecessary();
+			CreateExchangesAndQueuesIfNecessary();
+			BindExchangesAndQueues();
+
+			inputAddress = new RabbitMqAddress(InputBroker, InputExchange, InputQueue, InputRoutingKeys);
+			errorAddress = new RabbitMqAddress(ErrorBroker, ErrorExchange, ErrorQueue, ErrorRoutingKeys);
 
 			for (var i = 0; i < numberOfWorkerThreads; ++i)
-			{
 				AddWorkerThread().Start();
-			}
 		}
 
 		public void ChangeNumberOfWorkerThreads(Int32 targetNumberOfWorkerThreads)
@@ -73,55 +74,96 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			}
 		}
 
-		private void CreateQueuesIfNecessary()
+		private void CreateExchangesAndQueuesIfNecessary()
 		{
-			if (!DoNotCreateQueues)
+			if (DoNotCreateInputExchange == false)
+				DeclareExchange(InputBroker, InputExchange, InputExchangeType);
+
+			if (DoNotCreateInputQueue == false)
+				DeclareQueue(InputBroker, InputQueue);
+
+			if (DoNotCreateErrorExchange == false)
+				DeclareExchange(ErrorBroker, ErrorExchange, ErrorExchangeType);
+
+			if (DoNotCreateErrorQueue == false)
+				DeclareQueue(ErrorBroker, ErrorQueue);
+		}
+
+		private void DeclareQueue(string broker, string queue)
+		{
+			if (string.IsNullOrEmpty(queue))
 			{
-				var inputQueue = RabbitMqAddress.FromString(ListenAddress);
-				var errorQueue = RabbitMqAddress.FromString(PoisonAddress);
+				log.Info("No Queue Provided. Not attempting Declare");
+				return;
+				//var message = "No Input Queue Provided. Cannot Declare Queue";
+				//log.Error(message);
+				//throw new InvalidOperationException(message);
+			}
 
-				using(var connection = connectionProvider.Open(ProtocolName, inputQueue.Broker, true))
+			using (var connection = connectionProvider.Open(ProtocolName, broker, true))
+			{
+				var channel = connection.Model();
+				log.InfoFormat("Declaring Queue {0} on Broker {1}", queue, broker);
+				channel.QueueDeclare(queue, false, false, false, null);
+			}
+		}
+
+		private void DeclareExchange(string broker, string exchange, string exchangeType)
+		{
+			if (string.IsNullOrEmpty(exchange))
+			{
+				log.Info("No Exchange Provided. Not attempting Declare");
+				return;
+				//var message = "No Input Exchange Provided. Cannot Declare Exchange";
+				//log.Error(message);
+				//throw new InvalidOperationException(message);
+			}
+
+			using (var connection = connectionProvider.Open(ProtocolName, broker, true))
+			{
+				var channel = connection.Model();
+
+				log.InfoFormat(
+					"Declaring Exchange {0} of Type {1} on Broker {2}",
+					exchange,
+					exchangeType,
+					broker);
+
+				channel.ExchangeDeclare(exchange, exchangeType);
+			}
+		}
+
+		private void BindExchangesAndQueues()
+		{
+			BindQueue(InputBroker, InputExchange, InputQueue, InputRoutingKeys);
+			BindQueue(ErrorBroker, ErrorExchange, ErrorQueue, ErrorRoutingKeys);
+		}
+
+		private void BindQueue(string broker, string exchange, string queue, string routingKeys)
+		{
+			using (var connection = connectionProvider.Open(ProtocolName, broker, true))
+			{
+				var channel = connection.Model();
+				var keys = routingKeys.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+
+				foreach(var key in keys)
 				{
-					var channel = connection.Model();
-
-					if (!string.IsNullOrEmpty(inputQueue.Exchange))
-						channel.ExchangeDeclare(inputQueue.Exchange, ListenExchangeType);
-
-					if (!string.IsNullOrEmpty(inputQueue.QueueName))
-						channel.QueueDeclare(inputQueue.QueueName, false, false, false, null);
-					else
-					{
-						//this is not correct, I would rather queues be autodeleted, having
-						//trouble with that
-						inputQueue.SetQueueName(
-							channel.QueueDeclare("", false, false, false, null));
-					}
-
-					if (!string.IsNullOrEmpty(inputQueue.Exchange))
-						channel.QueueBind(inputQueue.QueueName, inputQueue.Exchange, string.Empty);
-
-					this.listenAddress = inputQueue;
+					log.InfoFormat("Binding Key {0} on Queue {1} on Exchange {2}", key, queue, exchange);
+					channel.QueueBind(queue, exchange, key);
 				}
-
-				using (var connection = connectionProvider.Open(ProtocolName, errorQueue.Broker, true))
-				{
-					var channel = connection.Model();
-
-					if (!string.IsNullOrEmpty(errorQueue.Exchange))
-						channel.ExchangeDeclare(errorQueue.Exchange, "fanout");
-
-					channel.QueueDeclare(errorQueue.QueueName, false, false, false, null);
-					
-					if (!string.IsNullOrEmpty(errorQueue.Exchange))
-						channel.QueueBind(errorQueue.QueueName, errorQueue.Exchange, string.Empty);
-				}
-
 			}
 		}
 
 		public void Send(TransportMessage transportMessage, string destination)
 		{
 			var address = RabbitMqAddress.FromString(destination);
+
+			//if sending locally we need to munge some stuff (remove routing keys)
+			if(address == inputAddress)
+				address = 
+					new RabbitMqAddress(
+						inputAddress.Broker, inputAddress.Exchange, inputAddress.QueueName);
+
 			using (var stream = new MemoryStream())
 			{
 				this.MessageSerializer.Serialize(transportMessage.Body, stream);
@@ -137,7 +179,7 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 					}
 
 					properties.Timestamp = DateTime.UtcNow.ToAmqpTimestamp();
-					properties.ReplyTo = this.ListenAddress;
+					properties.ReplyTo = this.InputAddress;
 					properties.SetPersistent(transportMessage.Recoverable);
 					var headers = transportMessage.Headers;
 					if (headers != null && headers.Count > 0)
@@ -148,7 +190,35 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 						properties.Headers = dictionary;
 					}
-					log.Info("Sending message " + destination + " of " + transportMessage.Body[0].GetType().Name);
+
+					if(address.RouteByType)
+					{
+						var type = transportMessage.Body[0].GetType();
+						string typeName = type.FullName;
+						log.InfoFormat("Sending message (routed) " + address.ToString(typeName) + " of " + type.Name);
+						channel.BasicPublish(address.Exchange, typeName, properties, stream.ToArray());
+						return;
+					}
+
+					var routingKeys = address.GetRoutingKeysAsArray();
+
+					if(routingKeys.Length > 1)
+					{
+						var message = "Too many Routing Keys specified for endpoint: " + address.ToString();
+						message += Environment.NewLine + "Keys: " + address.RoutingKeys;
+						log.Error(message);
+						throw new InvalidOperationException(message);
+					}
+					
+					if(routingKeys.Length > 0)
+					{
+						var type = transportMessage.Body[0].GetType();
+						log.InfoFormat("Sending message (routed) " + address.ToString() + " of " + type.Name);
+						channel.BasicPublish(address.Exchange, routingKeys[0], properties, stream.ToArray());
+						return;
+					}
+
+					log.Info("Sending message " + address.ToString() + " of " + transportMessage.Body[0].GetType().Name);
 					channel.BasicPublish(address.Exchange, address.QueueName, properties, stream.ToArray());
 					transportMessage.Id = properties.MessageId;
 				}
@@ -157,9 +227,9 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 		public void ReceiveMessageLater(TransportMessage transportMessage)
 		{
-			if (!String.IsNullOrEmpty(this.ListenAddress))
+			if (!String.IsNullOrEmpty(this.InputAddress))
 			{
-				Send(transportMessage, this.ListenAddress);
+				Send(transportMessage, this.InputAddress);
 			}
 		}
 
@@ -176,104 +246,22 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			}
 		}
 
-		public Int32 NumberOfWorkerThreads
-		{
-			get
-			{
-				lock (workers)
-				{
-					return workers.Count;
-				}
-			}
-			set { numberOfWorkerThreads = value; }
-		}
-
-		public Int32 MaximumNumberOfRetries
-		{
-			get { return maximumNumberOfRetries; }
-			set { maximumNumberOfRetries = value; }
-		}
-
-		public string Address
-		{
-			get
-			{
-				if (listenAddress == null)
-					return null;
-				return listenAddress.ToString();
-			}
-		}
-
-		public void Dispose()
-		{
-			lock (workers)
-			{
-				foreach (var worker in workers)
-				{
-					worker.Stop();
-				}
-			}
-		}
-
-		public event EventHandler<TransportMessageReceivedEventArgs> TransportMessageReceived;
-		public event EventHandler StartedMessageProcessing;
-		public event EventHandler FinishedMessageProcessing;
-		public event EventHandler FailedMessageProcessing;
-
-		public string ListenAddress
-		{
-			get { return listenAddress.ToString(); }
-			set { listenAddress = String.IsNullOrEmpty(value) ? null : RabbitMqAddress.FromString(value); }
-		}
-
-		public string PoisonAddress
-		{
-			get { return poisonAddress.ToString(); }
-			set { poisonAddress = String.IsNullOrEmpty(value) ? null : RabbitMqAddress.FromString(value); }
-		}
-
-		public IMessageSerializer MessageSerializer { get; set; }
-
-		public IsolationLevel IsolationLevel
-		{
-			get { return isolationLevel; }
-			set { isolationLevel = value; }
-		}
-
-		public string ProtocolName { get; set; }
-
-		public TimeSpan TransactionTimeout
-		{
-			get { return transactionTimeout; }
-			set { transactionTimeout = value; }
-		}
-
-		public TimeSpan ReceiveTimeout
-		{
-			get { return receiveTimeout; }
-			set { receiveTimeout = value; }
-		}
-
-		public string ListenExchangeType { get; set; }
-
-		public bool SendAcknowledgement { get; set; }
-
 		private WorkerThread AddWorkerThread()
 		{
 			lock (workers)
 			{
 				var newWorker = new WorkerThread(Process);
 				workers.Add(newWorker);
-				newWorker.Stopped += 
+				newWorker.Stopped +=
 					((sender, e) =>
-				        {
-				            var worker = sender as WorkerThread;
-				            lock (workers)
-				            {
-				                log.Info("Removing Worker");
-				                workers.Remove(worker);
-				            }
-				        });
+					{
+						var worker = sender as WorkerThread;
+						lock (workers)
+						{
+							log.Info("Removing Worker");
+							workers.Remove(worker);
+						}
+					});
 				return newWorker;
 			}
 		}
@@ -304,14 +292,14 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 		private void Receive(MessageReceiveProperties messageContext)
 		{
-			log.Debug("Receiving from " + listenAddress);
+			log.Debug("Receiving from " + inputAddress);
 
-			using (var connection = connectionProvider.Open(this.ProtocolName, listenAddress.Broker, true))
+			using (var connection = connectionProvider.Open(this.ProtocolName, inputAddress.Broker, true))
 			{
 				var channel = connection.Model();
 				var consumer = new QueueingBasicConsumer(channel);
 
-				channel.BasicConsume(listenAddress.QueueName, SendAcknowledgement, consumer);
+				channel.BasicConsume(inputAddress.QueueName, SendAcknowledgement, consumer);
 
 				var delivery = consumer.Receive(receiveTimeout);
 				if (delivery != null)
@@ -335,7 +323,7 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			if (startedProcessingError != null)
 			{
 				throw new MessageHandlingException("Exception occured while starting to process message.", startedProcessingError,
-				                                   null, null);
+												   null, null);
 			}
 
 			var m = new TransportMessage();
@@ -368,10 +356,10 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 					m.Headers.Add(
 						new HeaderInfo
-							{
-								Key = entry.Key.ToString(),
-								Value = valueString
-							});
+						{
+							Key = entry.Key.ToString(),
+							Value = valueString
+						});
 				}
 			}
 
@@ -385,7 +373,7 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			if (receivingError != null || finishedProcessingError != null)
 			{
 				throw new MessageHandlingException("Exception occured while processing message.", null, receivingError,
-				                                   finishedProcessingError);
+												   finishedProcessingError);
 			}
 			channel.BasicAck(delivery.DeliveryTag, false);
 		}
@@ -446,16 +434,16 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 		private void MoveToPoison(BasicDeliverEventArgs delivery)
 		{
-			if (poisonAddress == null)
+			if (errorAddress == null)
 			{
 				log.Info("Discarding " + delivery.BasicProperties.MessageId);
 				return;
 			}
-			using (var connection = connectionProvider.Open(this.ProtocolName, listenAddress.Broker, false))
+			using (var connection = connectionProvider.Open(this.ProtocolName, inputAddress.Broker, false))
 			{
 				var channel = connection.Model();
-				log.Info("Moving " + delivery.BasicProperties.MessageId + " to " + poisonAddress);
-				channel.BasicPublish(poisonAddress.Exchange, poisonAddress.QueueName, delivery.BasicProperties, delivery.Body);
+				log.Info("Moving " + delivery.BasicProperties.MessageId + " to " + errorAddress);
+				channel.BasicPublish(errorAddress.Exchange, errorAddress.QueueName, delivery.BasicProperties, delivery.Body);
 			}
 		}
 
@@ -526,6 +514,112 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			}
 			return null;
 		}
+
+		public void Dispose()
+		{
+			lock (workers)
+			{
+				foreach (var worker in workers)
+				{
+					worker.Stop();
+				}
+			}
+		}
+
+		public event EventHandler<TransportMessageReceivedEventArgs> TransportMessageReceived;
+		public event EventHandler StartedMessageProcessing;
+		public event EventHandler FinishedMessageProcessing;
+		public event EventHandler FailedMessageProcessing;
+
+		public Int32 NumberOfWorkerThreads
+		{
+			get
+			{
+				lock (workers)
+				{
+					return workers.Count;
+				}
+			}
+			set { numberOfWorkerThreads = value; }
+		}
+
+		public Int32 MaximumNumberOfRetries
+		{
+			get { return maximumNumberOfRetries; }
+			set { maximumNumberOfRetries = value; }
+		}
+
+		public string Address
+		{
+			get
+			{
+				if (inputAddress == null)
+					return null;
+				return inputAddress.ToString();
+			}
+		}
+
+		public string InputAddress
+		{
+			get { return inputAddress.ToString(); }
+		}
+
+		public string ErrorAddress
+		{
+			get { return errorAddress.ToString(); }
+		}
+
+		public IMessageSerializer MessageSerializer { get; set; }
+
+		public IsolationLevel IsolationLevel
+		{
+			get { return isolationLevel; }
+			set { isolationLevel = value; }
+		}
+
+		public string ProtocolName { get; set; }
+
+		public TimeSpan TransactionTimeout
+		{
+			get { return transactionTimeout; }
+			set { transactionTimeout = value; }
+		}
+
+		public TimeSpan ReceiveTimeout
+		{
+			get { return receiveTimeout; }
+			set { receiveTimeout = value; }
+		}
+
+		public string InputExchangeType { get; set; }
+
+		public bool SendAcknowledgement { get; set; }
+
+		public string InputBroker { get; set; }
+
+		public string InputExchange { get; set; }
+
+		public string InputQueue { get; set; }
+
+		public string InputRoutingKeys { get; set; }
+
+		public bool DoNotCreateInputExchange { get; set; }
+
+		public bool DoNotCreateInputQueue { get; set; }
+
+		public string ErrorBroker { get; set; }
+
+		public string ErrorExchange { get; set; }
+
+		public string ErrorQueue { get; set; }
+
+		public string ErrorRoutingKeys { get; set; }
+
+		public string ErrorExchangeType { get; set; }
+
+		public bool DoNotCreateErrorExchange { get; set; }
+
+		public bool DoNotCreateErrorQueue { get; set; }
 	}
 
 	public static class ConsumerHelpers
