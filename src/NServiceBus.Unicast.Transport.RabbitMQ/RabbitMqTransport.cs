@@ -141,10 +141,14 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 		private void BindQueue(string broker, string exchange, string queue, string routingKeys)
 		{
+			if(string.IsNullOrEmpty(exchange))
+				return;
+
 			using (var connection = connectionProvider.Open(ProtocolName, broker, true))
 			{
 				var channel = connection.Model();
 				var keys = routingKeys.Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+				keys = keys.Length == 0 ? new[] {""} : keys;
 
 				foreach(var key in keys)
 				{

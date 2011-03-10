@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using log4net;
 using RabbitMQ.Client;
@@ -9,9 +10,8 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 	{
 		private readonly ILog log = LogManager.GetLogger(typeof (ConnectionProvider));
 
-		private static readonly ThreadSafeDictionary<string, ConnectionFactory> connectionFactories
-			= new ThreadSafeDictionary<string, ConnectionFactory>(
-				new Dictionary<string, ConnectionFactory>());
+		private static readonly ConcurrentDictionary<string, ConnectionFactory> connectionFactories
+			= new ConcurrentDictionary<string, ConnectionFactory>();
 
 		[ThreadStatic] private static Dictionary<string, OpenedSession> state;
 
@@ -79,7 +79,7 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			{
 				factory = new ConnectionFactory();
 				factory.Endpoint = new AmqpTcpEndpoint(protocol, brokerAddress);
-				connectionFactories.Add(key, factory);
+				factory = connectionFactories.GetOrAdd(key, factory);
 			}
 
 			return factory;

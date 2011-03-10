@@ -12,9 +12,10 @@ namespace Producer
 		{
 			Console.WriteLine("Press 'Enter' to send a message. To exit, Ctrl + C");
 
-			while (Console.ReadLine() != null)
+			while (true)
 			{
-				var payload = "Hello World";
+				var payload = Console.ReadLine();
+				payload = string.IsNullOrEmpty(payload) ? "Hello World" : payload;
 				Console.WriteLine("Sending Message: {0}", payload);
 				Bus.Send<SimpleMessage>( m => { m.Message = payload; });
 			}
