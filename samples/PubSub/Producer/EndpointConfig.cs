@@ -1,6 +1,7 @@
 using System;
 using MyMessages;
 using NServiceBus;
+using NServiceBus.Unicast.Subscriptions.RabbitMQ.Config;
 using NServiceBus.Unicast.Transport.RabbitMQ.Config;
 
 namespace Producer
@@ -13,6 +14,7 @@ namespace Producer
 				.DefaultBuilder()
 				.XmlSerializer()
 				.RabbitMqTransport()
+				.LocalRabbitMqSubcriptionStorage()
 				.UnicastBus();
 		}
 	}

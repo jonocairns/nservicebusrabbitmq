@@ -17,7 +17,7 @@ namespace Producer
 				var payload = Console.ReadLine();
 				payload = string.IsNullOrEmpty(payload) ? "Hello World" : payload;
 				Console.WriteLine("Sending Message: {0}", payload);
-				Bus.Send<SimpleMessage>( m => { m.Message = payload; });
+				Bus.Publish<SimpleMessage>( m => { m.Message = payload; });
 			}
 		}
 
