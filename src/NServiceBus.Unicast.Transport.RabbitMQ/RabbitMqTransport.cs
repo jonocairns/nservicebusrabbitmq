@@ -296,8 +296,6 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 
 		private void Receive(MessageReceiveProperties messageContext)
 		{
-			log.Debug("Receiving from " + inputAddress);
-
 			using (var connection = connectionProvider.Open(this.ProtocolName, inputAddress.Broker, true))
 			{
 				var channel = connection.Model();
@@ -308,6 +306,7 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 				var delivery = consumer.Receive(receiveTimeout);
 				if (delivery != null)
 				{
+					log.Debug("Receiving from " + inputAddress);
 					DeliverMessage(channel, messageContext, delivery);
 				}
 			}

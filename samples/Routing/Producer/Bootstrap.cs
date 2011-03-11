@@ -18,6 +18,9 @@ namespace Producer
 				LogMessage message = null;
 				read = string.IsNullOrEmpty(read) ? "info Info Message" : read;
 
+				if (read.IndexOf(" ") < 0)
+					read += " Log Message";
+
 				var type = read.Substring(0, read.IndexOf(" "));
 				var payload = read.Substring(read.IndexOf(" ") + 1);
 

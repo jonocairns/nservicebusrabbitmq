@@ -146,7 +146,7 @@ namespace NServiceBus.Unicast.Transport.RabbitMQ
 			if (!string.IsNullOrEmpty(queueName))
 				uri = addParam(uri, QueueKey, queueName);
 
-			if (!string.IsNullOrEmpty(RoutingKeysKey))
+			if (!string.IsNullOrEmpty(routingKeys))
 				uri = addParam(uri, RoutingKeysKey, routingKeys);
 
 			return uri;
